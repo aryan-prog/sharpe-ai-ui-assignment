@@ -17,4 +17,4 @@ For example: if user types numbers "123" (1...2...3) quickly. the field should s
 
 ## Live Demo
 
-Experience the live version of the AI-Summarizer at [Live Demo](https://sharpe-ai-ui.netlify.app/).
+Experience the live version of this assignment at [Live Demo](https://sharpe-ai-ui.netlify.app/).
