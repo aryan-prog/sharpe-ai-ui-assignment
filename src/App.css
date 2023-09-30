@@ -100,7 +100,9 @@ h1 {
   font-size: 15px;
   cursor: pointer;
 }
-
+.delayed{
+  margin-top: 20px;
+}
 .rectangle:nth-child(1) {
   grid-row: span 2; /* This makes the second rectangle twice the height of the first one */
 }

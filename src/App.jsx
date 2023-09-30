@@ -4,10 +4,13 @@ import './App.css'
 function App() {
   const [inputValue, setInputValue] = useState('');
   const [typingTimeout, setTypingTimeout] = useState(null);
+  const [delayedValue, setDelayedValue] = useState('');
+
 
   // Handle input change
   const handleInputChange = (event) => {
     const newValue = event.target.value;
+    setInputValue(newValue);
 
     // Clear any previous typing timeout
     if (typingTimeout) {
@@ -16,7 +19,7 @@ function App() {
 
     // Set a new typing timeout
     const newTypingTimeout = setTimeout(() => {
-      setInputValue(newValue);
+      setDelayedValue(newValue);
     }, 1000); // Adjust the delay (in milliseconds) as needed
 
     setTypingTimeout(newTypingTimeout);
@@ -49,6 +52,8 @@ function App() {
             <span id='heads'>Borrow Amount</span>
             <button className='max-amount'> Max Held Amount : 200</button>
             <input value={inputValue} onChange={handleInputChange} placeholder='Enter Supply Amount' id='fill'></input>
+            <br/>
+            <input className="delayed"value={delayedValue} onChange={handleInputChange} placeholder='Delayed Amount' id='fill'></input>
           </div>
           <button className='execute'>Execute</button>
         </div>
